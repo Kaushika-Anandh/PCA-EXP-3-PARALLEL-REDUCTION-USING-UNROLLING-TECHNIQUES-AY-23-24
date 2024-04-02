@@ -50,8 +50,7 @@ Memory Deallocation
 
 ## PROGRAM:
 ### Unrolling8
-```py
-%%cuda
+```c
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -263,8 +262,7 @@ __global__ void reduceUnrolling8(int *g_idata, int *g_odata, unsigned int n)
 ```
 
 ### Unrolling16
-```py
-%%cuda
+```c
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -483,7 +481,11 @@ __global__ void reduceUnrolling16(int *g_idata, int *g_odata, unsigned int n)
 ```
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+### Unrolling8
+![](1.PNG)
+
+### Unrolling16
+![](2.PNG)
 
 ## RESULT:
-Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that _________ has executed with less elapsed time than _____________ with blocks_____,______.
+Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that `Unrolling16` has executed with less elapsed time than `Unrolling8` with blocks `1048576`,`1048576`.
